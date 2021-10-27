@@ -2,7 +2,7 @@
 
 The "random" provider allows the use of randomness within Terraform configurations. [See documentation](https://registry.terraform.io/providers/hashicorp/random/latest/docs) 
 
-This repository shows an example on how you install the random provider 
+This repository shows an example on how you install the random provider and use the resource [random_string](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) to generate a string which you will see as the output. 
 
 # Prerequisites
 
@@ -23,15 +23,25 @@ cd random
 ```
 terraform init
 ```
-4. Sample output
+5. Terraform plan
 ```
-Initializing the backend...
+terraform plan
+```
+6. Terraform apply
+```
+terraform apply
+```
+7. Sample output
+```
+...
+...
+...
+random_string.name: Creating...
+random_string.name: Creation complete after 0s [id=]-r}RLLqzYhyB?n!]
 
-Initializing provider plugins...
-- Finding latest version of hashicorp/random...
-- Installing hashicorp/random v3.1.0...
-- Installed hashicorp/random v3.1.0 (signed by HashiCorp)
-...
-...
-...
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+name = "]-r}RLLqzYhyB?n!"
 ```
